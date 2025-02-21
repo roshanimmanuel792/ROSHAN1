@@ -1,5 +1,0 @@
-def add(x,y):
-  return print(x+y)
-a=5
-b=2
-c=add(a)
