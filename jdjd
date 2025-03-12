@@ -1,0 +1,152 @@
+inventory { 'gold': 500, 'pouch': ['flint', 'twine' 'gemstone'], 'backpack': ['xylophone', 'dagger', 'bedroll', 'bread loaf'] inventory['pocket'] = ['seashell', 'strange berry', 'lint'] inventory['backpack'].sort() inventory['backpack'].remove('dagger') inventory['gold] += 50 print(inventory) print("URK24CS1152")
+
+
+
+
+
+# Creating the prices dictionary
+prices = {
+    "banana": 4,
+    "apple": 2,
+    "orange": 1.5,
+    "pear": 3
+}
+
+# Creating the stock dictionary
+stock = {
+    "banana": 6,
+    "apple": 0,
+    "orange": 12,
+    "pear": 5
+}
+
+# Loop to print price and stock
+for item in prices:
+    print(f"{item} price: {prices[item]} stock: {stock[item]}")
+
+# Calculate total revenue
+total = 0
+for item in prices:
+    revenue = prices[item] * stock[item]
+    print(revenue)
+    total += revenue
+
+# Print total revenue
+print(total)
+
+
+
+
+
+
+
+# Creating the groceries list
+groceries = ["banana", "orange", "apple"]
+
+# Creating the stock dictionary
+stock = {
+    "banana": 6,
+    "apple": 0,
+    "orange": 32,
+    "pear": 15
+}
+
+# Creating the prices dictionary
+prices = {
+    "banana": 4,
+    "apple": 2,
+    "orange": 1.5,
+    "pear": 3
+}
+
+# Defining the compute_bill function
+def compute_bill(food):
+    total = 0
+    for item in food:
+        if stock[item] > 0:  # Check if item is in stock
+            total += prices[item]  # Add price to total
+            stock[item] -= 1  # Reduce stock count
+    return total
+
+# Example usage
+print(compute_bill(groceries))
+
+
+
+
+
+
+
+# Creating student dictionaries
+lloyd = {
+    "name": "Lloyd",
+    "homework": [90.0, 97.0, 75.0, 92.0],
+    "quizzes": [88.0, 40.0, 94.0],
+    "tests": [75.0, 90.0]
+}
+
+alice = {
+    "name": "Alice",
+    "homework": [100.0, 92.0, 98.0, 100.0],
+    "quizzes": [82.0, 83.0, 91.0],
+    "tests": [89.0, 97.0]
+}
+
+tyler = {
+    "name": "Tyler",
+    "homework": [0.0, 87.0, 75.0, 22.0],
+    "quizzes": [0.0, 75.0, 78.0],
+    "tests": [100.0, 100.0]
+}
+
+# Creating the students list
+students = [lloyd, alice, tyler]
+
+# Printing student data
+for student in students:
+    print(student["name"])
+    print("Homework:", student["homework"])
+    print("Quizzes:", student["quizzes"])
+    print("Tests:", student["tests"])
+
+# Function to calculate average
+def average(numbers):
+    total = sum(numbers)
+    total = float(total) / len(numbers)
+    return total
+
+# Function to calculate weighted average for a student
+def get_average(student):
+    homework = average(student["homework"])
+    quizzes = average(student["quizzes"])
+    tests = average(student["tests"])
+    return (homework * 0.1) + (quizzes * 0.3) + (tests * 0.6)
+
+# Function to determine letter grade
+def get_letter_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+# Testing get_letter_grade with Lloyd's average
+print(get_letter_grade(get_average(lloyd)))
+
+# Function to calculate class average
+def get_class_average(students):
+    results = []
+    for student in students:
+        results.append(get_average(student))
+    return average(results)
+
+# Printing class average and letter grade
+class_avg = get_class_average(students)
+print(class_avg)
+print(get_letter_grade(class_avg))
+
