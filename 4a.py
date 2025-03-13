@@ -1,1 +1,0 @@
-print('URK24CS1182) def is_perfect_number(n): "Function to check if a number is perfect.""" F n < 1: return False divisors_sum = sum([i for i in range(1, n) if n % i == 0]) return divisors_sum if is_per perfect_number(num) print(f"{num} is a perfect number.") else: 9 num = int(input("Enter a number: ")) 10 11 12 13 print(f"{num} is not a perfect number.")
