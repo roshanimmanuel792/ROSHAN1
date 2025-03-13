@@ -1,1 +1,0 @@
-print('URK24CS1182') 2 string='restart' first_char=string[0] 4 modified_string=first_char+string[1:].replace(first_char,'#') 5 print(modified_string)
