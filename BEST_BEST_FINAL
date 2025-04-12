@@ -23,16 +23,11 @@ class SmartSearchApp:
 
      
 #API
-        self.API_KEY = "AIzaSyCKBWPHu6iu2qqSF7d90I-t8piluN8-gz4"
-        self.CX_MAP = {
-            "General": "a129e49bcfdb6437d",
-            "Shopping": "b1d007ba438f64b3f",
-            "News": "2235eeaab95e64a97"
-        }
+        se
 
 # Email alert
         self.sender_email = "roshanimmanuel10@gmail.com"
-        self.sender_password = "eugfypovkopcyrnz"
+        self.sender_password = ""
         self.recipient_email = "roshanimmanuel24@karunya.edu.in"
 
         self.risky_keywords = ["otp", "pin", "credit card", "bank", "aadhar", "ssn", "password", "login help", "refund", "cash app", "transfer money"]
