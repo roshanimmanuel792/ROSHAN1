@@ -1,0 +1,80 @@
+from tkinter import *
+from tkinter import messagebox
+
+#Setting up the window
+a=Tk()
+a.title("HI")
+a.geometry("300x200")
+
+l2=Label(a,text="Enter your first number")
+l2.pack()
+e1=Entry()
+e1.pack()
+l3=Label(a,text="Enter your second number")
+l3.pack()
+e2=Entry()
+e2.pack(pady=50)
+def add():
+    try:
+        En1=int(e1.get())
+        En2=int(e2.get())
+        Op=En1+En2
+        messagebox.showinfo("answer ",Op)
+    except:
+        i="enter a valid number"
+        messagebox.showerror("ERROR",i)
+        
+b1=Button(a,text="+",command=add)
+b1.pack()
+
+def sub():
+            try:
+                En1=int(e1.get())
+                En2=int(e2.get())
+                Op=En1-En2
+                messagebox.showinfo("answer ",Op)
+            except:
+                i="enter a valid number"
+                messagebox.showerror("ERROR",i)
+        
+b2=Button(a,text="-",command=sub)
+b2.pack(pady=100)
+
+def div():
+            try:
+                En1=int(e1.get())
+                En2=int(e2.get())
+                Op=En1//En2
+                messagebox.showinfo("answer ",Op)
+            except:
+                i="enter a valid number"
+                messagebox.showerror("ERROR",i)
+        
+b3=Button(a,text="//",command=div)
+b3.pack(padx=120,pady=100)
+
+def div1():
+            try:
+                En1=int(e1.get())
+                En2=int(e2.get())
+                Op=En1%En2
+                messagebox.showinfo("answer ",Op)
+            except:
+                i="enter a valid number"
+                messagebox.showerror("ERROR",i)
+        
+b4=Button(a,text="Division(%)",command=div1)
+b4.pack(padx=120,pady=100)
+def mul():
+            try:
+                En1=int(e1.get())
+                En2=int(e2.get())
+                Op=En1*En2
+                messagebox.showinfo("answer ",Op)
+            except:
+                i="enter a valid number"
+                messagebox.showerror("ERROR",i)
+        
+b5=Button(a,text="*",command=mul)
+b5.pack(padx=120,pady=100)
+a.mainloop()
